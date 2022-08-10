@@ -13,6 +13,7 @@ namespace gNube
     {
 
         public static string RutaPosOnLine;
+        public static string RutaGestionFtp;
 
 
         const string _pathOrigen = @"ftp://pitabodegas.com//PosOnLineNew//";
@@ -116,13 +117,21 @@ namespace gNube
 
         public void SubirCambios()
         {
-            var _arch = "PosOnLine New ver 2022.07.02.14.zip";
-            var rt = _dataP.MonitorSistemaPosOnLine_ActualizarVer(_arch);
-            if (rt.Result == Result.Enumerados.EnumResult.isError)
-            {
-                Helpers.HelpMsg.Error(rt.Mensaje);
-                return;
-            }
+            //var _arch = "PosOnLine New ver 2022.08.02.10.zip";
+            //var rt = _dataP.MonitorSistemaPosOnLine_ActualizarVer(_arch);
+            //if (rt.Result == Result.Enumerados.EnumResult.isError)
+            //{
+            //    Helpers.HelpMsg.Error(rt.Mensaje);
+            //    return;
+            //}
+
+            //var _arch = "FTP SUCURSAL NEW 2022.08.02.10.zip";
+            //var rt = _dataP.MonitorSistemaGestionFtp_ActualizarVer(_arch);
+            //if (rt.Result == Result.Enumerados.EnumResult.isError)
+            //{
+            //    Helpers.HelpMsg.Error(rt.Mensaje);
+            //    return;
+            //}
             Helpers.HelpMsg.OK("CAMBIOS ACTUALIZADO EXITOSAMENTE");
         }
 
@@ -135,6 +144,64 @@ namespace gNube
         private bool CargarData()
         {
             return true;
+        }
+
+
+        public void Actualizar_GestionFtp()
+        {
+            _st.Clear();
+
+            MsgDebug("Conectando Con BD");
+            var _archivo = "";
+            var rt = _dataP.MonitorSistemaGestionFtp_Info();
+            if (rt.Result == Result.Enumerados.EnumResult.isError)
+            {
+                Helpers.HelpMsg.Error(rt.Mensaje);
+                return;
+            }
+            MsgDebug("Info Sist/Actualizar: " + rt.Entidad);
+            _archivo = rt.Entidad;
+            var _archivoBajar = _pathOrigen + _archivo;
+            var _destino = _pathDestino + _archivo;
+
+            MsgDebug("Borrando Carpeta Destino");
+            var rt0 = Helpers.HelpFiles.BorrarCrearDirectorio(_pathDestino);
+            if (rt0.Result == Result.Enumerados.EnumResult.isError)
+            {
+                Helpers.HelpMsg.Error(rt0.Mensaje);
+                return;
+            }
+
+            MsgDebug("Conectado Con Hosting");
+            var rt1 = _ftp.BajarArchivo(_archivoBajar, _destino);
+            if (rt1.Result == Result.Enumerados.EnumResult.isError)
+            {
+                Helpers.HelpMsg.Error(rt1.Mensaje);
+                return;
+            }
+            MsgDebug("Descargando Actualizacion");
+
+            MsgDebug("UnZip Archivo");
+            var _archivoDescomprimir = _destino;
+            var rt2 = Helpers.HelpZip.DesComprimir(_archivoDescomprimir, _pathDestino);
+            if (rt2.Result == Result.Enumerados.EnumResult.isError)
+            {
+                Helpers.HelpMsg.Error(rt2.Mensaje);
+                return;
+            }
+
+            MsgDebug("Reemplazando Archivos En Carpeta Destino");
+            var _rutaOrigen = _destino.Substring(0, _destino.IndexOf(".zip"));
+            var _rutaGestionFtp= RutaGestionFtp;
+            var rt3 = Helpers.HelpFiles.CopiarArchivos(_rutaOrigen, _rutaGestionFtp);
+            if (rt3.Result == Result.Enumerados.EnumResult.isError)
+            {
+                Helpers.HelpMsg.Error(rt3.Mensaje);
+                return;
+            }
+            MsgDebug("Proceso Finalizado");
+
+            Helpers.HelpMsg.OK("PROCESO REALIZADO CON EXITO");
         }
 
     }

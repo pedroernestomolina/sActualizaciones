@@ -60,7 +60,6 @@ namespace gNube.DataProvider
 
             return result;
         }
-
         public Result.Resultado 
             MonitorSistemaPosOnLine_ActualizarVer(string new_pos)
         {
@@ -80,6 +79,83 @@ namespace gNube.DataProvider
                                         where id=1";
                         var comando1 = new MySqlCommand(sql1, cn, tr);
                         comando1.Parameters.AddWithValue("@new_pos", new_pos);
+                        comando1.ExecuteNonQuery();
+                        tr.Commit();
+                    }
+                    catch (Exception ex)
+                    {
+                        tr.Rollback();
+                        result.Mensaje = ex.Message;
+                        result.Result = Result.Enumerados.EnumResult.isError;
+                    }
+                };
+            }
+            catch (Exception ex)
+            {
+                result.Mensaje = ex.Message;
+                result.Result = Result.Enumerados.EnumResult.isError;
+            }
+
+            return result;
+        }
+
+
+        public Result.ResultadoEntidad<string> 
+            MonitorSistemaGestionFtp_Info()
+        {
+            var result = new Result.ResultadoEntidad<string>();
+
+            try
+            {
+                using (var cn = new MySqlConnection(_cn.ConnectionString))
+                {
+                    cn.Open();
+
+                    try
+                    {
+                        var sql1 = @"select gestion_gtp
+                                    from monitor_act_sistema 
+                                    where id=1";
+                        var comando1 = new MySqlCommand(sql1, cn);
+                        var idObj = comando1.ExecuteScalar();
+                        if (idObj != null)
+                        {
+                            result.Entidad = idObj.ToString();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        result.Mensaje = ex.Message;
+                        result.Result = Result.Enumerados.EnumResult.isError;
+                    }
+                };
+            }
+            catch (Exception ex)
+            {
+                result.Mensaje = ex.Message;
+                result.Result = Result.Enumerados.EnumResult.isError;
+            }
+
+            return result;
+        }
+        public Result.Resultado MonitorSistemaGestionFtp_ActualizarVer(string new_ftp)
+        {
+            var result = new Result.Resultado();
+
+            try
+            {
+                using (var cn = new MySqlConnection(_cn.ConnectionString))
+                {
+                    cn.Open();
+                    MySqlTransaction tr = null;
+                    try
+                    {
+                        tr = cn.BeginTransaction();
+                        var sql1 = @"update monitor_act_sistema set 
+                                        gestion_gtp=@new_ftp
+                                        where id=1";
+                        var comando1 = new MySqlCommand(sql1, cn, tr);
+                        comando1.Parameters.AddWithValue("@new_ftp", new_ftp);
                         comando1.ExecuteNonQuery();
                         tr.Commit();
                     }

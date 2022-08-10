@@ -36,19 +36,20 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.BT_ACTUALIZAR_PosOnLineNew = new System.Windows.Forms.Button();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.BT_ACTUALIZAR_GESTION_FTP = new System.Windows.Forms.Button();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.BT_SUBIR_CAMBIOS = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.L_DEBUG = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.L_VERSION = new System.Windows.Forms.Label();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.BT_SUBIR_CAMBIOS = new System.Windows.Forms.Button();
             this.P_PRINCIPAL.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -56,12 +57,13 @@
             this.panel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panel11.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
-            this.panel11.SuspendLayout();
             this.SuspendLayout();
             // 
             // P_PRINCIPAL
@@ -175,6 +177,73 @@
             this.BT_ACTUALIZAR_PosOnLineNew.UseVisualStyleBackColor = true;
             this.BT_ACTUALIZAR_PosOnLineNew.Click += new System.EventHandler(this.BT_ACTUALIZAR_PosOnLineNew_Click);
             // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.BT_ACTUALIZAR_GESTION_FTP);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel8.Location = new System.Drawing.Point(1, 39);
+            this.panel8.Margin = new System.Windows.Forms.Padding(1);
+            this.panel8.Name = "panel8";
+            this.panel8.Padding = new System.Windows.Forms.Padding(2);
+            this.panel8.Size = new System.Drawing.Size(348, 36);
+            this.panel8.TabIndex = 1;
+            // 
+            // BT_ACTUALIZAR_GESTION_FTP
+            // 
+            this.BT_ACTUALIZAR_GESTION_FTP.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BT_ACTUALIZAR_GESTION_FTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BT_ACTUALIZAR_GESTION_FTP.Location = new System.Drawing.Point(2, 2);
+            this.BT_ACTUALIZAR_GESTION_FTP.Name = "BT_ACTUALIZAR_GESTION_FTP";
+            this.BT_ACTUALIZAR_GESTION_FTP.Size = new System.Drawing.Size(344, 32);
+            this.BT_ACTUALIZAR_GESTION_FTP.TabIndex = 3;
+            this.BT_ACTUALIZAR_GESTION_FTP.Text = "Actualizar GESTION FTP ";
+            this.BT_ACTUALIZAR_GESTION_FTP.UseVisualStyleBackColor = true;
+            this.BT_ACTUALIZAR_GESTION_FTP.Click += new System.EventHandler(this.BT_ACTUALIZAR_GESTION_FTP_Click);
+            // 
+            // panel9
+            // 
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel9.Location = new System.Drawing.Point(1, 77);
+            this.panel9.Margin = new System.Windows.Forms.Padding(1);
+            this.panel9.Name = "panel9";
+            this.panel9.Padding = new System.Windows.Forms.Padding(2);
+            this.panel9.Size = new System.Drawing.Size(348, 36);
+            this.panel9.TabIndex = 2;
+            // 
+            // panel10
+            // 
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel10.Location = new System.Drawing.Point(1, 115);
+            this.panel10.Margin = new System.Windows.Forms.Padding(1);
+            this.panel10.Name = "panel10";
+            this.panel10.Padding = new System.Windows.Forms.Padding(2);
+            this.panel10.Size = new System.Drawing.Size(348, 36);
+            this.panel10.TabIndex = 3;
+            // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.BT_SUBIR_CAMBIOS);
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel11.Location = new System.Drawing.Point(1, 153);
+            this.panel11.Margin = new System.Windows.Forms.Padding(1);
+            this.panel11.Name = "panel11";
+            this.panel11.Padding = new System.Windows.Forms.Padding(2);
+            this.panel11.Size = new System.Drawing.Size(348, 39);
+            this.panel11.TabIndex = 4;
+            // 
+            // BT_SUBIR_CAMBIOS
+            // 
+            this.BT_SUBIR_CAMBIOS.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BT_SUBIR_CAMBIOS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BT_SUBIR_CAMBIOS.Location = new System.Drawing.Point(2, 2);
+            this.BT_SUBIR_CAMBIOS.Name = "BT_SUBIR_CAMBIOS";
+            this.BT_SUBIR_CAMBIOS.Size = new System.Drawing.Size(344, 35);
+            this.BT_SUBIR_CAMBIOS.TabIndex = 3;
+            this.BT_SUBIR_CAMBIOS.Text = "SUBIR CAMBIOS";
+            this.BT_SUBIR_CAMBIOS.UseVisualStyleBackColor = true;
+            this.BT_SUBIR_CAMBIOS.Visible = false;
+            this.BT_SUBIR_CAMBIOS.Click += new System.EventHandler(this.BT_SUBIR_CAMBIOS_Click);
+            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Yellow;
@@ -239,17 +308,6 @@
             this.panel6.Size = new System.Drawing.Size(226, 33);
             this.panel6.TabIndex = 0;
             // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.L_VERSION);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(229, 1);
-            this.panel7.Margin = new System.Windows.Forms.Padding(1);
-            this.panel7.Name = "panel7";
-            this.panel7.Padding = new System.Windows.Forms.Padding(2);
-            this.panel7.Size = new System.Drawing.Size(158, 33);
-            this.panel7.TabIndex = 1;
-            // 
             // label1
             // 
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -262,6 +320,17 @@
             this.label1.Text = "Tools Actualizaciones";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.L_VERSION);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel7.Location = new System.Drawing.Point(229, 1);
+            this.panel7.Margin = new System.Windows.Forms.Padding(1);
+            this.panel7.Name = "panel7";
+            this.panel7.Padding = new System.Windows.Forms.Padding(2);
+            this.panel7.Size = new System.Drawing.Size(158, 33);
+            this.panel7.TabIndex = 1;
+            // 
             // L_VERSION
             // 
             this.L_VERSION.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -272,60 +341,6 @@
             this.L_VERSION.TabIndex = 1;
             this.L_VERSION.Text = "Ver 1.0.0.0";
             this.L_VERSION.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            // 
-            // panel8
-            // 
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel8.Location = new System.Drawing.Point(1, 39);
-            this.panel8.Margin = new System.Windows.Forms.Padding(1);
-            this.panel8.Name = "panel8";
-            this.panel8.Padding = new System.Windows.Forms.Padding(2);
-            this.panel8.Size = new System.Drawing.Size(348, 36);
-            this.panel8.TabIndex = 1;
-            // 
-            // panel9
-            // 
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel9.Location = new System.Drawing.Point(1, 77);
-            this.panel9.Margin = new System.Windows.Forms.Padding(1);
-            this.panel9.Name = "panel9";
-            this.panel9.Padding = new System.Windows.Forms.Padding(2);
-            this.panel9.Size = new System.Drawing.Size(348, 36);
-            this.panel9.TabIndex = 2;
-            // 
-            // panel10
-            // 
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(1, 115);
-            this.panel10.Margin = new System.Windows.Forms.Padding(1);
-            this.panel10.Name = "panel10";
-            this.panel10.Padding = new System.Windows.Forms.Padding(2);
-            this.panel10.Size = new System.Drawing.Size(348, 36);
-            this.panel10.TabIndex = 3;
-            // 
-            // panel11
-            // 
-            this.panel11.Controls.Add(this.BT_SUBIR_CAMBIOS);
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel11.Location = new System.Drawing.Point(1, 153);
-            this.panel11.Margin = new System.Windows.Forms.Padding(1);
-            this.panel11.Name = "panel11";
-            this.panel11.Padding = new System.Windows.Forms.Padding(2);
-            this.panel11.Size = new System.Drawing.Size(348, 39);
-            this.panel11.TabIndex = 4;
-            // 
-            // BT_SUBIR_CAMBIOS
-            // 
-            this.BT_SUBIR_CAMBIOS.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BT_SUBIR_CAMBIOS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BT_SUBIR_CAMBIOS.Location = new System.Drawing.Point(2, 2);
-            this.BT_SUBIR_CAMBIOS.Name = "BT_SUBIR_CAMBIOS";
-            this.BT_SUBIR_CAMBIOS.Size = new System.Drawing.Size(344, 35);
-            this.BT_SUBIR_CAMBIOS.TabIndex = 3;
-            this.BT_SUBIR_CAMBIOS.Text = "SUBIR CAMBIOS";
-            this.BT_SUBIR_CAMBIOS.UseVisualStyleBackColor = true;
-            this.BT_SUBIR_CAMBIOS.Visible = false;
-            this.BT_SUBIR_CAMBIOS.Click += new System.EventHandler(this.BT_SUBIR_CAMBIOS_Click);
             // 
             // PrincipalFrm
             // 
@@ -344,13 +359,14 @@
             this.panel2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
+            this.panel11.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
-            this.panel11.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -378,6 +394,7 @@
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Button BT_SUBIR_CAMBIOS;
+        private System.Windows.Forms.Button BT_ACTUALIZAR_GESTION_FTP;
 
     }
 }

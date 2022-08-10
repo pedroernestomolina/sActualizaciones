@@ -13,9 +13,13 @@ namespace gNube.DataProvider
 
         Result.ResultadoEntidad<string>
             MonitorSistemaPosOnLine_Info();
-
         Result.Resultado
             MonitorSistemaPosOnLine_ActualizarVer(string new_pos);
+
+        Result.ResultadoEntidad<string>
+            MonitorSistemaGestionFtp_Info();
+        Result.Resultado
+            MonitorSistemaGestionFtp_ActualizarVer(string new_pos);
 
     }
 

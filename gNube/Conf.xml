@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Configuracion>
   <RUTA_POS_ON_LINE_NEW>C:\PosOnLine New</RUTA_POS_ON_LINE_NEW>
+  <RUTA_GESTION_FTP>C:\Modulos Leonux\FTP SUCURSAL</RUTA_GESTION_FTP>
 </Configuracion>

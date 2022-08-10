@@ -32,6 +32,10 @@ namespace gNube.Helpers
                                 {
                                     Principal.RutaPosOnLine = nv.InnerText.Trim();
                                 }
+                                if (nv.LocalName.ToUpper().Trim() == "RUTA_GESTION_FTP")
+                                {
+                                    Principal.RutaGestionFtp = nv.InnerText.Trim();
+                                }
                             }
                         }
                     }

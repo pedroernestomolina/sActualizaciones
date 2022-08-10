@@ -58,6 +58,15 @@ namespace gNube
             _controlador.SubirCambios();
         }
 
+        private void BT_ACTUALIZAR_GESTION_FTP_Click(object sender, EventArgs e)
+        {
+            Actualizar_GestionFtp();
+        }
+        private void Actualizar_GestionFtp()
+        {
+            _controlador.Actualizar_GestionFtp();
+        }
+
     }
 
 }
