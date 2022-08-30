@@ -117,13 +117,13 @@ namespace gNube
 
         public void SubirCambios()
         {
-            //var _arch = "PosOnLine New ver 2022.08.02.10.zip";
-            //var rt = _dataP.MonitorSistemaPosOnLine_ActualizarVer(_arch);
-            //if (rt.Result == Result.Enumerados.EnumResult.isError)
-            //{
-            //    Helpers.HelpMsg.Error(rt.Mensaje);
-            //    return;
-            //}
+            var _arch = "PosOnLine New ver 2022.08.05.29.zip";
+            var rt = _dataP.MonitorSistemaPosOnLine_ActualizarVer(_arch);
+            if (rt.Result == Result.Enumerados.EnumResult.isError)
+            {
+                Helpers.HelpMsg.Error(rt.Mensaje);
+                return;
+            }
 
             //var _arch = "FTP SUCURSAL NEW 2022.08.02.10.zip";
             //var rt = _dataP.MonitorSistemaGestionFtp_ActualizarVer(_arch);

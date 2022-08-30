@@ -241,7 +241,6 @@
             this.BT_SUBIR_CAMBIOS.TabIndex = 3;
             this.BT_SUBIR_CAMBIOS.Text = "SUBIR CAMBIOS";
             this.BT_SUBIR_CAMBIOS.UseVisualStyleBackColor = true;
-            this.BT_SUBIR_CAMBIOS.Visible = false;
             this.BT_SUBIR_CAMBIOS.Click += new System.EventHandler(this.BT_SUBIR_CAMBIOS_Click);
             // 
             // panel4
