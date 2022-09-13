@@ -117,7 +117,7 @@ namespace gNube
 
         public void SubirCambios()
         {
-            var _arch = "PosOnLine New ver 2022.08.05.29.zip";
+            var _arch = "PosOnLine New ver 2022.09.02.13.zip";
             var rt = _dataP.MonitorSistemaPosOnLine_ActualizarVer(_arch);
             if (rt.Result == Result.Enumerados.EnumResult.isError)
             {
